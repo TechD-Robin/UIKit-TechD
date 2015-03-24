@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AA8CE691AC1621D003901EB /* UIKit_TechD.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AA8CE681AC1621D003901EB /* UIKit_TechD.h */; };
-		2AA8CE6B1AC1621D003901EB /* UIKit_TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE6A1AC1621D003901EB /* UIKit_TechD.m */; };
 		2AA8CE711AC1621D003901EB /* libUIKit+TechD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8CE651AC1621D003901EB /* libUIKit+TechD.a */; };
+		2AA8CE8A1AC162B6003901EB /* NSLayoutConstraint+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE801AC162B6003901EB /* NSLayoutConstraint+TechD.m */; };
+		2AA8CE8B1AC162B6003901EB /* UIGestureRecognizer+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE821AC162B6003901EB /* UIGestureRecognizer+TechD.m */; };
+		2AA8CE8C1AC162B6003901EB /* UIImage+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE841AC162B6003901EB /* UIImage+TechD.m */; };
+		2AA8CE8D1AC162B6003901EB /* UIImageView+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE861AC162B6003901EB /* UIImageView+TechD.m */; };
+		2AA8CE8E1AC162B6003901EB /* UIScreen+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE891AC162B6003901EB /* UIScreen+TechD.m */; };
+		2AA8CE9A1AC163C5003901EB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8CE911AC163C5003901EB /* LICENSE */; };
+		2AA8CE9B1AC163C5003901EB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE921AC163C5003901EB /* README.md */; };
+		2AA8CE9C1AC163C5003901EB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE921AC163C5003901EB /* README.md */; };
+		2AA8CE9D1AC163C5003901EB /* TDGeometricFigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE951AC163C5003901EB /* TDGeometricFigure.m */; };
+		2AA8CE9E1AC163C5003901EB /* TDGeometricFigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE951AC163C5003901EB /* TDGeometricFigure.m */; };
+		2AA8CE9F1AC163C5003901EB /* TDMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE971AC163C5003901EB /* TDMath.m */; };
+		2AA8CEA01AC163C5003901EB /* TDMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE971AC163C5003901EB /* TDMath.m */; };
+		2AA8CEA11AC163C5003901EB /* TDTrigonometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE991AC163C5003901EB /* TDTrigonometry.m */; };
+		2AA8CEA21AC163C5003901EB /* TDTrigonometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8CE991AC163C5003901EB /* TDTrigonometry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +41,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				2AA8CE691AC1621D003901EB /* UIKit_TechD.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,10 +48,27 @@
 
 /* Begin PBXFileReference section */
 		2AA8CE651AC1621D003901EB /* libUIKit+TechD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIKit+TechD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AA8CE681AC1621D003901EB /* UIKit_TechD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKit_TechD.h; sourceTree = "<group>"; };
-		2AA8CE6A1AC1621D003901EB /* UIKit_TechD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKit_TechD.m; sourceTree = "<group>"; };
 		2AA8CE701AC1621D003901EB /* UIKit+TechDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIKit+TechDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA8CE761AC1621D003901EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA8CE7F1AC162B6003901EB /* NSLayoutConstraint+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE801AC162B6003901EB /* NSLayoutConstraint+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+TechD.m"; sourceTree = "<group>"; };
+		2AA8CE811AC162B6003901EB /* UIGestureRecognizer+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE821AC162B6003901EB /* UIGestureRecognizer+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+TechD.m"; sourceTree = "<group>"; };
+		2AA8CE831AC162B6003901EB /* UIImage+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE841AC162B6003901EB /* UIImage+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TechD.m"; sourceTree = "<group>"; };
+		2AA8CE851AC162B6003901EB /* UIImageView+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE861AC162B6003901EB /* UIImageView+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TechD.m"; sourceTree = "<group>"; };
+		2AA8CE871AC162B6003901EB /* UIKit+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE881AC162B6003901EB /* UIScreen+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+TechD.h"; sourceTree = "<group>"; };
+		2AA8CE891AC162B6003901EB /* UIScreen+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+TechD.m"; sourceTree = "<group>"; };
+		2AA8CE911AC163C5003901EB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2AA8CE921AC163C5003901EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2AA8CE941AC163C5003901EB /* TDGeometricFigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGeometricFigure.h; sourceTree = "<group>"; };
+		2AA8CE951AC163C5003901EB /* TDGeometricFigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGeometricFigure.m; sourceTree = "<group>"; };
+		2AA8CE961AC163C5003901EB /* TDMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMath.h; sourceTree = "<group>"; };
+		2AA8CE971AC163C5003901EB /* TDMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMath.m; sourceTree = "<group>"; };
+		2AA8CE981AC163C5003901EB /* TDTrigonometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTrigonometry.h; sourceTree = "<group>"; };
+		2AA8CE991AC163C5003901EB /* TDTrigonometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTrigonometry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +95,7 @@
 			children = (
 				2AA8CE671AC1621D003901EB /* UIKit+TechD */,
 				2AA8CE741AC1621D003901EB /* UIKit+TechDTests */,
+				2AA8CE8F1AC16342003901EB /* Libraries */,
 				2AA8CE661AC1621D003901EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,8 +112,17 @@
 		2AA8CE671AC1621D003901EB /* UIKit+TechD */ = {
 			isa = PBXGroup;
 			children = (
-				2AA8CE681AC1621D003901EB /* UIKit_TechD.h */,
-				2AA8CE6A1AC1621D003901EB /* UIKit_TechD.m */,
+				2AA8CE871AC162B6003901EB /* UIKit+TechD.h */,
+				2AA8CE881AC162B6003901EB /* UIScreen+TechD.h */,
+				2AA8CE891AC162B6003901EB /* UIScreen+TechD.m */,
+				2AA8CE831AC162B6003901EB /* UIImage+TechD.h */,
+				2AA8CE841AC162B6003901EB /* UIImage+TechD.m */,
+				2AA8CE851AC162B6003901EB /* UIImageView+TechD.h */,
+				2AA8CE861AC162B6003901EB /* UIImageView+TechD.m */,
+				2AA8CE811AC162B6003901EB /* UIGestureRecognizer+TechD.h */,
+				2AA8CE821AC162B6003901EB /* UIGestureRecognizer+TechD.m */,
+				2AA8CE7F1AC162B6003901EB /* NSLayoutConstraint+TechD.h */,
+				2AA8CE801AC162B6003901EB /* NSLayoutConstraint+TechD.m */,
 			);
 			path = "UIKit+TechD";
 			sourceTree = "<group>";
@@ -103,6 +141,38 @@
 				2AA8CE761AC1621D003901EB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AA8CE8F1AC16342003901EB /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2AA8CE901AC163C5003901EB /* TDMath */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		2AA8CE901AC163C5003901EB /* TDMath */ = {
+			isa = PBXGroup;
+			children = (
+				2AA8CE911AC163C5003901EB /* LICENSE */,
+				2AA8CE921AC163C5003901EB /* README.md */,
+				2AA8CE931AC163C5003901EB /* TDMath */,
+			);
+			name = TDMath;
+			path = Libraries/TDMath;
+			sourceTree = "<group>";
+		};
+		2AA8CE931AC163C5003901EB /* TDMath */ = {
+			isa = PBXGroup;
+			children = (
+				2AA8CE961AC163C5003901EB /* TDMath.h */,
+				2AA8CE971AC163C5003901EB /* TDMath.m */,
+				2AA8CE981AC163C5003901EB /* TDTrigonometry.h */,
+				2AA8CE991AC163C5003901EB /* TDTrigonometry.m */,
+				2AA8CE941AC163C5003901EB /* TDGeometricFigure.h */,
+				2AA8CE951AC163C5003901EB /* TDGeometricFigure.m */,
+			);
+			path = TDMath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA8CE9A1AC163C5003901EB /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AA8CE6B1AC1621D003901EB /* UIKit_TechD.m in Sources */,
+				2AA8CE9D1AC163C5003901EB /* TDGeometricFigure.m in Sources */,
+				2AA8CE9B1AC163C5003901EB /* README.md in Sources */,
+				2AA8CE8B1AC162B6003901EB /* UIGestureRecognizer+TechD.m in Sources */,
+				2AA8CE8E1AC162B6003901EB /* UIScreen+TechD.m in Sources */,
+				2AA8CE8D1AC162B6003901EB /* UIImageView+TechD.m in Sources */,
+				2AA8CE9F1AC163C5003901EB /* TDMath.m in Sources */,
+				2AA8CE8C1AC162B6003901EB /* UIImage+TechD.m in Sources */,
+				2AA8CEA11AC163C5003901EB /* TDTrigonometry.m in Sources */,
+				2AA8CE8A1AC162B6003901EB /* NSLayoutConstraint+TechD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA8CE9C1AC163C5003901EB /* README.md in Sources */,
+				2AA8CE9E1AC163C5003901EB /* TDGeometricFigure.m in Sources */,
+				2AA8CEA21AC163C5003901EB /* TDTrigonometry.m in Sources */,
+				2AA8CEA01AC163C5003901EB /* TDMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -282,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
