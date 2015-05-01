@@ -403,6 +403,25 @@ static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical
 }
 
 //  ------------------------------------------------------------------------------------------------
++ ( UIDevicePlatformFamily ) devicePlatformFamily
+{
+    NSString                      * devicePlatform;
+    
+    devicePlatform                  = [[self class] devicePlatform];
+    NSParameterAssert( nil != devicePlatform );
+    
+    if ( [devicePlatform hasPrefix: @"Simulator"] == YES )      return UIDevicePlatformFamilySimulator;
+    if ( [devicePlatform hasPrefix: @"iPhone"] == YES )         return UIDevicePlatformFamilyiPhone;
+    if ( [devicePlatform hasPrefix: @"iPod"] == YES )           return UIDevicePlatformFamilyiPod;
+    if ( [devicePlatform hasPrefix: @"iPad"] == YES )           return UIDevicePlatformFamilyiPad;
+    if ( [devicePlatform hasPrefix: @"Apple TV"] == YES )       return UIDevicePlatformFamilyAppleTV;
+    if ( [devicePlatform hasPrefix: @"Apple Watch"] == YES )    return UIDevicePlatformFamilyAppleWatch;
+    
+    return UIDevicePlatformFamilyUnknown;
+}
+
+
+//  ------------------------------------------------------------------------------------------------
 + ( NSArray * ) knownDevicePlatforms
 {
     NSMutableArray                * modelNameList;
