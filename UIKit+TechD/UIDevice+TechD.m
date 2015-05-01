@@ -72,17 +72,17 @@ static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical
              @"iPhone1,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPhone",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              
              @"iPhone1,2" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPhone 3G",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
             
              @"iPhone2,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPhone 3GS",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
             
              @"iPhone3,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPhone 4",
@@ -147,15 +147,15 @@ static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical
              @"iPod1,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPod Touch 1G",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              @"iPod2,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPod Touch 2G",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              @"iPod3,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPod Touch 3G",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 320, 480 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              @"iPod4,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPod Touch 4G",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 640, 960 }",
@@ -169,7 +169,7 @@ static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical
              @"iPad1,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 768, 1024 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
 
              @"iPad2,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad 2 (WiFi)",
@@ -190,15 +190,15 @@ static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical
              @"iPad2,5" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad Mini 1G (WiFi)",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 768, 1024 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              @"iPad2,6" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad Mini 1G (GSM)",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 768, 1024 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
              @"iPad2,7" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad Mini 1G (GSM+CDMA)",
                      UIDevice_TechDHWInfoKeyPhysicalPixels :    @"{ 768, 1024 }",
-                     @"Asset Scale": @(2) },
+                     @"Asset Scale": @(1) },
 
              @"iPad3,1" : @{
                      UIDevice_TechDHWInfoKeyModelName :         @"iPad 3 (WiFi)",
