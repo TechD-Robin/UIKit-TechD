@@ -15,6 +15,9 @@
 //  ------------------------------------------------------------------------------------------------
 #pragma mark define constant string.
 //  ------------------------------------------------------------------------------------------------
+static  char      * const UIDevice_TechDHWInfoKeyHWModel            = "hw.model";
+static  char      * const UIDevice_TechDHWInfoKeyHWMachine          = "hw.machine";
+
 static  NSString  * const UIDevice_TechDHWInfoKeyModelName          = @"Model Name";
 static  NSString  * const UIDevice_TechDHWInfoKeyPhysicalPixels     = @"Physical Pixels";
 
@@ -30,6 +33,9 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyiPad         = @"iPad";
 static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleTV      = @"Apple TV";
 static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Watch";
 
+static  NSString  * const UIDevice_TechDHWInfoKeySimulatorX86       = @"i386";
+static  NSString  * const UIDevice_TechDHWInfoKeySimulatorX64       = @"x86_64";
+
 //  ------------------------------------------------------------------------------------------------
 //  ------------------------------------------------------------------------------------------------
 #pragma mark -
@@ -44,15 +50,47 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
 @interface UIDevice (Private)
 
 //  ------------------------------------------------------------------------------------------------
+#pragma mark declare for platform's container.
 //  ------------------------------------------------------------------------------------------------
+/**
+ *  @brief register all known device information into the container and return it.
+ *  register all known device information into the container and return it.
+ *
+ *  @return container|nil           the container or nil.
+ */
 + ( NSDictionary * ) _DeviceHardwareInformation;
 
-+ ( NSDictionary * ) _GetDeviceHardwareInformationByIdentifiter:(NSString *)deviceIdentifiter;
+//  ------------------------------------------------------------------------------------------------
+/**
+ *  @brief get a device information by identifier.
+ *  get a device information by identifier.
+ *
+ *  @param deviceIdentifier         a device's key.
+ *
+ *  @return container|nil           the container of device information or nil.
+ */
++ ( NSDictionary * ) _GetDeviceHardwareInformationByIdentifier:(NSString *)deviceIdentifier;
 
+//  ------------------------------------------------------------------------------------------------
+/**
+ *  @brief get the device information.
+ *  get the device information.
+ *
+ *  @return container|nil           the container of device information or nil.
+ */
 + ( NSDictionary * ) _GetDeviceHardwareInformation;
 
 //  ------------------------------------------------------------------------------------------------
+#pragma mark declare for get device's hardware's information.
 //  ------------------------------------------------------------------------------------------------
+/**
+ *  @brief get a system information by name.
+ *  get a system information by name.
+ *
+ *  @param levelIdentifier          a information's key.
+ *
+ *  @return string|nil              the information's string or nil.
+ */
 + ( NSString * ) _GetSysInfoByName:(char *)levelIdentifier;
 
 //  ------------------------------------------------------------------------------------------------
@@ -70,14 +108,18 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
 #pragma mark implementation private category (Private)
 //  ------------------------------------------------------------------------------------------------
 @implementation UIDevice (Private)
-//  ------------------------------------------------------------------------------------------------
-//  ------------------------------------------------------------------------------------------------
 
+//  ------------------------------------------------------------------------------------------------
+//  ------------------------------------------------------------------------------------------------
+#pragma mark method for platform's container.
+//  ------------------------------------------------------------------------------------------------
+//  reference data :
+//
 //  http://theiphonewiki.com/wiki/Models
 //  http://www.everyi.com/by-identifier/ipod-iphone-ipad-specs-by-model-identifier.html
-
-//  --------------------------------
-//  { aKey: { show string, asset scale } }
+//
+//  ------------------------------------------------------------------------------------------------
+//  { aKey: { model name, physical pixels, asset scale } }
 + ( NSDictionary * ) _DeviceHardwareInformation
 {
     static NSDictionary           * _hardwareInformation = nil;
@@ -316,11 +358,11 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
                                         
                                         
                                         //  simulator.
-                                        @"i386"     : @{
+                                        UIDevice_TechDHWInfoKeySimulatorX86 : @{
                                                 UIDevice_TechDHWInfoKeyModelName :         @"Simulator",
                                                 UIDevice_TechDHWInfoKeyPhysicalPixels :     NSStringFromCGSize( [[UIScreen mainScreen] bounds].size ),
                                                 @"Asset Scale": @(2) },
-                                        @"x86_64"   : @{
+                                        UIDevice_TechDHWInfoKeySimulatorX64 : @{
                                                 UIDevice_TechDHWInfoKeyModelName :         @"Simulator",
                                                 UIDevice_TechDHWInfoKeyPhysicalPixels :     NSStringFromCGSize( [[UIScreen mainScreen] bounds].size ),
                                                 @"Asset Scale": @(2) }
@@ -331,18 +373,19 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
 }
 
 //  ------------------------------------------------------------------------------------------------
-+ ( NSDictionary * ) _GetDeviceHardwareInformationByIdentifiter:(NSString *)deviceIdentifiter
++ ( NSDictionary * ) _GetDeviceHardwareInformationByIdentifier:(NSString *)deviceIdentifier
 {
-    return [[[self class] _DeviceHardwareInformation] objectForKey: deviceIdentifiter];
+    return [[[self class] _DeviceHardwareInformation] objectForKey: deviceIdentifier];
 }
 
 //  ------------------------------------------------------------------------------------------------
 + ( NSDictionary * ) _GetDeviceHardwareInformation
 {
-    return [[self class] _GetDeviceHardwareInformationByIdentifiter: [[self class] _GetSysInfoByName: "hw.machine"]];
+    return [[self class] _GetDeviceHardwareInformationByIdentifier: [[self class] _GetSysInfoByName: UIDevice_TechDHWInfoKeyHWMachine]];
 }
 
 //  ------------------------------------------------------------------------------------------------
+#pragma mark method for get device's hardware's information.
 //  ------------------------------------------------------------------------------------------------
 + ( NSString * ) _GetSysInfoByName:(char *)levelIdentifier
 {
@@ -363,11 +406,11 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
     
     //  special mechanism for simulator    
 #if defined( DEBUG ) && defined( TARGET_IPHONE_SIMULATOR ) && defined( ENFORCED_SIMULATOR_TO_SIMULATE_IDEVICE )
-    if ( strcmp( levelIdentifier,  "hw.machine" ) != 0 )
+    if ( strcmp( levelIdentifier, UIDevice_TechDHWInfoKeyHWMachine ) != 0 )
     {
         return result;
     }
-    if ( ( [result isEqualToString: @"i386"]  == NO ) && ( [result isEqualToString: @"x86_64"] == NO ) )
+    if ( ( [result isEqualToString: UIDevice_TechDHWInfoKeySimulatorX86] == NO ) && ( [result isEqualToString: UIDevice_TechDHWInfoKeySimulatorX64] == NO ) )
     {
         return result;
     }
@@ -378,7 +421,6 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
     
     return result;
 }
-
 
 //  ------------------------------------------------------------------------------------------------
 //  ------------------------------------------------------------------------------------------------
@@ -391,8 +433,8 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
 
 @implementation UIDevice (TechD)
 
-//  --------------------------------
 //  ------------------------------------------------------------------------------------------------
+#pragma mark method for get device's platform.
 //  ------------------------------------------------------------------------------------------------
 + ( BOOL ) isSimulator
 {
@@ -575,16 +617,17 @@ static  NSString  * const UIDevice_TechDHWInfoKeyFamilyAppleWatch   = @"Apple Wa
 #endif  //  End of  DEBUG.
 
 //  ------------------------------------------------------------------------------------------------
+#pragma mark method for get device's hardware's information.
 //  ------------------------------------------------------------------------------------------------
 + ( NSString * ) hwModel
 {
-    return [[self class] _GetSysInfoByName: "hw.model"];
+    return [[self class] _GetSysInfoByName: UIDevice_TechDHWInfoKeyHWModel];
 }
 
 //  ------------------------------------------------------------------------------------------------
 + ( NSString * ) hwMachine
 {
-    return [[self class] _GetSysInfoByName: "hw.machine"];
+    return [[self class] _GetSysInfoByName: UIDevice_TechDHWInfoKeyHWMachine];
 }
 
 //  ------------------------------------------------------------------------------------------------
