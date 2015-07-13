@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3700EC1B1865D100BF0380 /* UIButton+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3700EB1B1865D100BF0380 /* UIButton+TechD.m */; };
 		2A494A7E1AF26C610083EB14 /* UIDevice+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A494A7D1AF26C610083EB14 /* UIDevice+TechD.m */; };
 		2A494A7F1AF26C610083EB14 /* UIDevice+TechD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A494A7D1AF26C610083EB14 /* UIDevice+TechD.m */; };
 		2A494A811AF2766E0083EB14 /* TechDUIDeviceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A494A801AF2766E0083EB14 /* TechDUIDeviceTest.m */; };
@@ -49,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A3700EA1B1865D100BF0380 /* UIButton+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TechD.h"; sourceTree = "<group>"; };
+		2A3700EB1B1865D100BF0380 /* UIButton+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TechD.m"; sourceTree = "<group>"; };
 		2A494A7C1AF26C610083EB14 /* UIDevice+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TechD.h"; sourceTree = "<group>"; };
 		2A494A7D1AF26C610083EB14 /* UIDevice+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TechD.m"; sourceTree = "<group>"; };
 		2A494A801AF2766E0083EB14 /* TechDUIDeviceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechDUIDeviceTest.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				2AA8CE841AC162B6003901EB /* UIImage+TechD.m */,
 				2AD9D5541AE430FD00B2634F /* UIView+TechD.h */,
 				2AD9D5551AE430FD00B2634F /* UIView+TechD.m */,
+				2A3700EA1B1865D100BF0380 /* UIButton+TechD.h */,
+				2A3700EB1B1865D100BF0380 /* UIButton+TechD.m */,
 				2AA8CE851AC162B6003901EB /* UIImageView+TechD.h */,
 				2AA8CE861AC162B6003901EB /* UIImageView+TechD.m */,
 				2AA8CE811AC162B6003901EB /* UIGestureRecognizer+TechD.h */,
@@ -280,6 +285,7 @@
 				2AA8CE9D1AC163C5003901EB /* TDGeometricFigure.m in Sources */,
 				2AA8CE8B1AC162B6003901EB /* UIGestureRecognizer+TechD.m in Sources */,
 				2AD9D5561AE430FD00B2634F /* UIView+TechD.m in Sources */,
+				2A3700EC1B1865D100BF0380 /* UIButton+TechD.m in Sources */,
 				2AA8CE8E1AC162B6003901EB /* UIScreen+TechD.m in Sources */,
 				2AA8CE8D1AC162B6003901EB /* UIImageView+TechD.m in Sources */,
 				2AA8CE9F1AC163C5003901EB /* TDMath.m in Sources */,
