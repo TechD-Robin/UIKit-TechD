@@ -73,6 +73,40 @@
 
 //  ------------------------------------------------------------------------------------------------
 //  ------------------------------------------------------------------------------------------------
+- ( BOOL ) moveImageToTitleRightSide:(CGFloat)offsetX
+{
+    if ( [self imageView] == nil )
+    {
+        return NO;
+    }
+    
+    CGFloat                         titleWidth;
+    CGFloat                         imageWidth;
+    CGFloat                         gapWidth;
+    UIEdgeInsets                    titleEdgeInsets;
+    UIEdgeInsets                    imageEdgeInsets;
+    
+    [self                           sizeToFit];
+    titleWidth                      = ( ( [self titleLabel] != nil ) ? [[self titleLabel] frame].size.width : 0.0f );
+    imageWidth                      = [[self imageView] frame].size.width;
+    gapWidth                        = ( [self frame].size.width - ( titleWidth + imageWidth ) );
+    
+    titleEdgeInsets                 = ( ( [self titleLabel] != nil ) ? [self titleEdgeInsets] : UIEdgeInsetsZero );
+    imageEdgeInsets                 = [self imageEdgeInsets];
+    
+    titleEdgeInsets.left            -= imageWidth;
+    titleEdgeInsets.right           = ( imageWidth - titleEdgeInsets.right );
+    
+    imageEdgeInsets.left            += ( titleWidth + gapWidth + offsetX );
+    imageEdgeInsets.right           -= ( titleWidth + gapWidth + offsetX );
+    
+    [self                           setTitleEdgeInsets: titleEdgeInsets];
+    [self                           setImageEdgeInsets: imageEdgeInsets];
+    return YES;
+}
+
+//  ------------------------------------------------------------------------------------------------
+//  ------------------------------------------------------------------------------------------------
 
 @end
 

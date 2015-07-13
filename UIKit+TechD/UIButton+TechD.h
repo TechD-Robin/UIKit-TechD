@@ -23,6 +23,12 @@
                           disabled:(UIImage *)disabled selected:(UIImage *)selected origin:(CGPoint)offset;
 
 //  ------------------------------------------------------------------------------------------------
+//  use this method to change image position, will no effect on auto layout mechanism,
+//  because the size is set to fix.
+- ( BOOL ) moveImageToTitleRightSide:(CGFloat)offsetX;
+
+//  ------------------------------------------------------------------------------------------------
+
 
 @end
 
