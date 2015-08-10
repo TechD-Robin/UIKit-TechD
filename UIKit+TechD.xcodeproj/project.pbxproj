@@ -52,6 +52,7 @@
 /* Begin PBXFileReference section */
 		2A3700EA1B1865D100BF0380 /* UIButton+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TechD.h"; sourceTree = "<group>"; };
 		2A3700EB1B1865D100BF0380 /* UIButton+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TechD.m"; sourceTree = "<group>"; };
+		2A40E8861B793AE0007914F0 /* UIKit+TechD.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "UIKit+TechD.podspec"; sourceTree = "<group>"; };
 		2A494A7C1AF26C610083EB14 /* UIDevice+TechD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TechD.h"; sourceTree = "<group>"; };
 		2A494A7D1AF26C610083EB14 /* UIDevice+TechD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TechD.m"; sourceTree = "<group>"; };
 		2A494A801AF2766E0083EB14 /* TechDUIDeviceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechDUIDeviceTest.m; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 				2AA8CE741AC1621D003901EB /* UIKit+TechDTests */,
 				2AA8CE8F1AC16342003901EB /* Libraries */,
 				2AA8CE661AC1621D003901EB /* Products */,
+				2A40E8861B793AE0007914F0 /* UIKit+TechD.podspec */,
 			);
 			sourceTree = "<group>";
 		};
