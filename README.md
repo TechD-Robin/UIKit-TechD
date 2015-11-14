@@ -35,7 +35,7 @@ pod 'UIKit+TechD',   :git => 'https://github.com/TechD-Robin/UIKit-TechD.git',  
 
 ## License
 
-`Foundation+TechD` is released under the [MIT License][mitLink]. See `LICENSE` for details.
+`UIKit+TechD` is released under the [MIT License][mitLink]. See `LICENSE` for details.
 
 
 ## Annotation
